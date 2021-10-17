@@ -6,6 +6,6 @@ install:
 script:
   - black .
   - flake8 .
-  - coverage run manage.py test
+  - coverage run --source=polls manage.py test
 after_script:
   - coveralls
