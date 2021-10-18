@@ -8,6 +8,7 @@ before_script:
   - python manage.py collectstatic --noinput
 script:
   - black .
+  - flake8 .
   - coverage run --source=polls manage.py test
 after_script:
   - coveralls
